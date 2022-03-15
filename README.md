@@ -1,9 +1,7 @@
 
-# Light Weight Residual Dense Attention Net for Spectral Reconstruction
+# Modified Efficienet for SAR+EO Image classification
 
-This is implementation of LWRDA Net
-["Light Weight Residual Dense Attention Net for Spectral Reconstruction from
-RGB Images by K.Uma et .2020"](https://arxiv.org/ftp/arxiv/papers/2004/2004.06930.pdf) 
+
 
 ## Environment
 
@@ -22,33 +20,23 @@ Unzip the downloaded folder
 
 Open the powershell or terminal
 
-
 #### Step 3
 
+Please install the `pip install -U efficientnet==0.0.4` 
+
+#### Step 4
+
 ```
-$cd yourpathtoLightWeightModel
+$cd yourpathtoMaster
 
 $pwd
-> ~/LightWeightModel
+> ~/master
 
 $pip install --upgrade -r requirements.txt
 
 ```
 ## How to test the model on your own imgaes
 ```
-$python test.py --testImagePath=yourpathtoimages
+$python test.py --testSARImagePath=yourSAEImagepath --testEOImagePath=yourEOImagepath
 ```
 
-## Results
-
-| Data size  | Data  |  MRAE  |  SSIM  |
-| :------: | :------: | :-------: | :-------: |  
-| 400  | Training Data  | 0.02372  | 0.9899  |
-| 50  | Validation Data  | 0.04497  | 0.9827  |
-| 10  | Testing Data1  | 0.05478 | - |
-| 10  | Testing Data2 | 0.04577  | -  |
-
-
-## Reference 
-
-1. ["Coordinate 2D Convolution layer"](https://github.com/titu1994/keras-coordconv)
